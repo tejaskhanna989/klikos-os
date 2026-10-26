@@ -12,3 +12,4 @@
 *~
 *.swp
 .DS_Store
+src/kernel/linux-6.6.56.tar.xz
