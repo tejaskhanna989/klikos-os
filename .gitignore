@@ -1,0 +1,14 @@
+/build/
+/toolchain/
+/toolchain/src/
+*.o
+*.elf
+*.bin
+*.img
+*.iso
+*.img
+.vscode/
+.idea/
+*~
+*.swp
+.DS_Store

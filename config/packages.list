@@ -1,0 +1,16 @@
+# KlikOS package list (built-in apps)
+# Installed to /bin on the target image
+
+PKGS="\
+    init \
+    shell \
+    coreutils \
+    display-server \
+    window-manager \
+    framework \
+    runtime \
+    launcher \
+    settings \
+    files \
+    terminal \
+"
