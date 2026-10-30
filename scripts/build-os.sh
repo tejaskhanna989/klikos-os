@@ -64,9 +64,9 @@ echo "=== [5/5] Disk image ==="
 IMG="$BUILD_DIR/klikos.img"
 dd if=/dev/zero of="$IMG" bs=1M count=256 status=none
 
-SUDO_PASS="t"
+# sudo prompts on the terminal; no password is stored in this script.
 run_sudo() {
-    echo "$SUDO_PASS" | sudo -S "$@"
+    sudo "$@"
 }
 
 if command -v sudo >/dev/null 2>&1; then

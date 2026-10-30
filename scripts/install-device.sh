@@ -5,9 +5,9 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-SUDO_PASS="t"
+# sudo prompts on the terminal; no password is stored in this script.
 run_sudo() {
-    echo "$SUDO_PASS" | sudo -S "$@"
+    sudo "$@"
 }
 
 DEVICE="${1:-}"
@@ -44,7 +44,7 @@ if ! command -v sudo >/dev/null 2>&1; then
 fi
 
 # Test sudo access
-echo "$SUDO_PASS" | sudo -S -v 2>/dev/null || {
+sudo -v || {
     echo "Error: sudo authentication failed."
     exit 1
 }
